@@ -1,0 +1,3 @@
+Hello Hadoop from Shashi 
+shashi say Hello to hadoop
+Big Data Hadoop by shashi
