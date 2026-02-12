@@ -72,13 +72,13 @@ The transformation of lyrics input into `(word, 1)` pairs was analyzed and docum
 
 Example outputs such as:
 
-```
+
 
 ("up", 4)
 ("to", 3)
 ("get", 2)
 
-```
+
 
 were explained.
 
