@@ -257,7 +257,7 @@ This behavior is **correct and expected**.
 
 
 ```
-
+.
 ├── WordCount.java
 ├── wordcount.jar
 ├── output.txt
