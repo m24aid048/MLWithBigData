@@ -77,6 +77,7 @@ Example outputs such as:
 ("up", 4)
 
 ("to", 3)
+
 ("get", 2)
 
 
@@ -173,14 +174,14 @@ mapreduce.input.fileinputformat.split.maxsize
 
 ## Question 10 – Apache Spark Installation
 
-- Installed Apache Spark on WSL (Ubuntu)
-- Verified installation using:
+Installed Apache Spark on WSL (Ubuntu)
+Verified installation using:
 ```
 
 spark-shell
 
 ````
-- Configured Spark to access HDFS.
+Configured Spark to access HDFS.
 
 ---
 
