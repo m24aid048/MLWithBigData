@@ -1,0 +1,30 @@
+// Question 12 – Author Influence Network
+// Apache Spark (Scala)
+
+// Load books from HDFS
+val books = sc.wholeTextFiles("hdfs://localhost:9000/user/iitj/200.txt")
+
+// Extract (author, year)
+val authorYear = books.flatMap { case (file, text) =>
+  val author = "Author:\\s*(.*)".r.findFirstMatchIn(text).map(_.group(1))
+  val year = "(\\d{4})".r.findFirstMatchIn(text).map(_.group(1).toInt)
+  if (author.isDefined && year.isDefined)
+    Some((author.get, year.get))
+  else None
+}
+
+// Define influence window
+val X = 5
+
+// Build influence edges
+val influences = authorYear.cartesian(authorYear)
+  .filter { case ((a1, y1), (a2, y2)) =>
+    a1 != a2 && math.abs(y1 - y2) <= X
+  }
+  .map { case ((a1, _), (a2, _)) => (a1, a2) }
+
+// Compute out-degree
+val outDegree = influences.map { case (a1, a2) => (a1, 1) }.reduceByKey(_ + _)
+
+// Compute in-degree
+val inDegree = influences.map { case (a1, a2) => (a2, 1) }.reduceByKey(_ + _)
