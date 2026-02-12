@@ -262,6 +262,7 @@ This behavior is **correct and expected**.
 ├── wordcount.jar
 ├── output.txt
 ├── author_influence.scala
+├── etc.
 └── README.md
 ```
 
