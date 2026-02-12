@@ -122,18 +122,21 @@ Special care was taken to handle alphanumeric tokens correctly.
 ## Question 7 – WordCount on Large Dataset (200.txt)
 
 - Copied `200.txt` from local filesystem to HDFS:
-```
+
+
 
 hdfs dfs -copyFromLocal 200.txt /user/iitj/
 
-```
+
+
 - Executed WordCount job on the dataset.
 - Merged output files into a single local file using:
-```
+
+
 
 hdfs dfs -getmerge output/ output.txt
 
-```
+
 
 ✔ Output verified to contain correct word frequencies.
 
