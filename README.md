@@ -261,7 +261,10 @@ This behavior is **correct and expected**.
 ├── WordCount.java
 ├── wordcount.jar
 ├── output.txt
+├── shashi_wordcount
 ├── author_influence.scala
+├── wordcount
+├── wordcount_01
 ├── etc.
 └── README.md
 ```
