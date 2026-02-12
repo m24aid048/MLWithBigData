@@ -249,7 +249,7 @@ This behavior is **correct and expected**.
 
 ## Files in This Repository
 
-```
+
 .
 ├── WordCount.java
 ├── wordcount.jar
@@ -257,7 +257,7 @@ This behavior is **correct and expected**.
 ├── author_influence.scala
 ├── etc.
 └── README.md
-```
+
 
 ---
 
